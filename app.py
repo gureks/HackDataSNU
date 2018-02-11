@@ -83,9 +83,9 @@ def graph():
 		percent = prediction/len(scores['scores'])*100.00
 
 		if (prediction>=0.45*len(scores['scores'])):
-			prediction = 0
-		else:
 			prediction = 1
+		else:
+			prediction = 0
 			percent = 100 - percent
 
 		scores['scores'].append(prediction)
